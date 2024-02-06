@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <title>Register</title>
+    <script src="script.js"></script>
+</head>
+
+<body>
+    <form action="" onsubmit="return validateForm()">
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" maxlength="20" placeholder="testname123" autofocus required><br><br>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password"  placeholder="abc123" required ><br><br>
+
+        <label for="verification">Confirm Password:</label>
+        <input type="password" id="verification" name="verification"  placeholder="abc123" required ><br><br>
+
+
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="test@gmail.com" required><br><br>
+
+        <label for="dropdown">Year: </label>
+        <select id="dropdown">
+            <option value="1">Year 1</option>
+            <option value="2">Year 2</option>
+            <option value="3">Year 3</option>
+        </select><br><br>
+
+        <label for="SSN">Social Security Number</label>
+        <input type="text" id="SSN" name="SSN" pattern=[0-9]{6}-[0-9]{4} maxlength="11" placeholder="YYMMDD-xxxx"><br>
+        <small>Format: YYMMDD-xxxx</small><br><br>
+
+        <input type="submit" value="Register">
+
+    </form>
+
+    <a href="login.html">Already have an account? Click here</a>
+</body>
+
+</html>
