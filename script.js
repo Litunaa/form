@@ -1,13 +1,15 @@
 function validateForm(){   
     let passwordVerification = validatePassword();
+    if (!passwordVerification){
+        return false;
+    }
+    
     let SSNVerification = validateSocialSecurityNumber();
-
-
-    if (passwordVerification && SSNVerification){
-        return true;
+    if (!SSNVerification){
+        return false;
     }
 
-    return false;
+    return true;
 
 }
 
