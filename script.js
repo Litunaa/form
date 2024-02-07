@@ -4,7 +4,7 @@ function validateForm(){
         return false;
     }
     
-    let SSNVerification = validateSocialSecurityNumber();
+    let SSNVerification = validateSocialSecurityNumber();    // MAKE IT CHECK IF THE USER INPUTTED A SSN BEFORE RETURNING
     if (!SSNVerification){
         return false;
     }
