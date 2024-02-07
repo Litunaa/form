@@ -7,37 +7,42 @@
 </head>
 
 <body>
-    <form action="" onsubmit="return validateForm()">
-        <label for="username">Username:</label>
-        <input type="text" id="username" name="username" maxlength="20" placeholder="testname123" autofocus required><br><br>
 
-        <label for="password">Password:</label>
-        <input type="password" id="password" name="password"  placeholder="abc123" required ><br><br>
+    <div class="container">
+        <div class="register-container">
+            <h1>Register</h1>
+            <p class="mandatory-text">* Means mandatory</p>
+            <form action="" onsubmit="return validateForm()">
+                <label for="username" class="mandatory">Username:</label>
+                <input type="text" id="username" name="username" maxlength="20" placeholder="testname123" autofocus required><br><br>
 
-        <label for="verification">Confirm Password:</label>
-        <input type="password" id="verification" name="verification"  placeholder="abc123" required ><br><br>
+                <label for="password" class="mandatory">Password:</label>
+                <input type="password" id="password" name="password"  placeholder="abc1234" required ><br><br>
 
+                <label for="verification" class="mandatory">Confirm Password:</label>
+                <input type="password" id="verification" name="verification"  placeholder="abc1234" required ><br><br>
 
+                <label for="email" class="mandatory">Email:</label>
+                <input type="email" id="email" name="email" placeholder="test@gmail.com" required><br><br>
 
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" placeholder="test@gmail.com" required><br><br>
+                <label for="dropdown" class="mandatory">Year: </label>
+                <select id="dropdown">
+                    <option value="1">Year 1</option>
+                    <option value="2">Year 2</option>
+                    <option value="3">Year 3</option>
+                </select><br><br>
 
-        <label for="dropdown">Year: </label>
-        <select id="dropdown">
-            <option value="1">Year 1</option>
-            <option value="2">Year 2</option>
-            <option value="3">Year 3</option>
-        </select><br><br>
+                <label for="SSN">Social Security Number</label>
+                <div id="ssn">
+                    <input type="text" id="SSN" name="SSN" pattern=[0-9]{6}-[0-9]{4} maxlength="11" placeholder="YYMMDD-xxxx">
+                </div>
+                <small>Format: YYMMDD-xxxx</small><br><br>
+                <input type="submit" value="Register" onclick="return validateForm()">
 
-        <label for="SSN">Social Security Number</label>
-        <input type="text" id="SSN" name="SSN" pattern=[0-9]{6}-[0-9]{4} maxlength="11" placeholder="YYMMDD-xxxx"><br>
-        <small>Format: YYMMDD-xxxx</small><br><br>
-
-        <input type="submit" value="Register">
-
-    </form>
-
-    <a href="login.html">Already have an account? Click here</a>
+            </form>
+            <a href="login.html">Already have an account? Click here</a>
+        </div>
+    </div>
 </body>
 
 </html>

@@ -2,13 +2,20 @@ function validateForm(){
     let passwordVerification = validatePassword();
     let SSNVerification = validateSocialSecurityNumber();
 
+
+    if (passwordVerification && SSNVerification){
+        return true;
+    }
+
+    return false;
+
 }
 
 function validateSocialSecurityNumber(){
     let SSN = document.getElementById("SSN").value;
 
 
-    // Year and Personal Number isn't necessary to check since they could be withing the 00-99 range
+    // "Year" and "Personal Number" isn't necessary to check since they are valid for all numbers. 
     let month = parseInt(SSN.substring(2, 4));
     let day = parseInt(SSN.substring(4, 6));
 
