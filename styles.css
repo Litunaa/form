@@ -23,7 +23,7 @@ body{
 
 }
 
-.register-container .mandatory-text {
+.register-container .mandatory-text, .login-container .mandatory-text {
     color: red;
     font-size: 14;
 }
