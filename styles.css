@@ -5,6 +5,12 @@ body{
     background-color: #000;
 }
 
+.login-container a, .register-container a{
+    padding-bottom: 15px;
+    display: flex;
+    justify-content: center;
+}
+
 /* Container Layout */
 .container{
     display: flex;
