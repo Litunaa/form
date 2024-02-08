@@ -1,13 +1,18 @@
 function validateForm(){   
+
+    let SSNVerification = validateSocialSecurityNumber();    
+
+    if (!SSNVerification){
+        return false;
+    }
+
+
+
     let passwordVerification = validatePassword();
     if (!passwordVerification){
         return false;
     }
     
-    let SSNVerification = validateSocialSecurityNumber();    // MAKE IT CHECK IF THE USER INPUTTED A SSN BEFORE RETURNING
-    if (!SSNVerification){
-        return false;
-    }
 
     return true;
 
@@ -15,6 +20,10 @@ function validateForm(){
 
 function validateSocialSecurityNumber(){
     let SSN = document.getElementById("SSN").value;
+
+    if (!SSN){
+        return "empty";
+    }
 
 
     // "Year" and "Personal Number" isn't necessary to check since they are valid for all numbers. 
