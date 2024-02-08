@@ -1,3 +1,5 @@
+// Marcus H TE21B
+
 function validateForm(){   
     let SSNVerification = validateSocialSecurityNumber();    
     if (!SSNVerification){
