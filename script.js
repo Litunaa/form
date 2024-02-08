@@ -1,19 +1,14 @@
 function validateForm(){   
-
     let SSNVerification = validateSocialSecurityNumber();    
-
     if (!SSNVerification){
         return false;
     }
-
-
 
     let passwordVerification = validatePassword();
     if (!passwordVerification){
         return false;
     }
     
-
     return true;
 
 }
@@ -21,26 +16,19 @@ function validateForm(){
 function validateSocialSecurityNumber(){
     let SSN = document.getElementById("SSN").value;
 
-
     if (SSN){
         // "Year" and "Personal Number" isn't necessary to check since they are valid for all numbers. 
         let month = parseInt(SSN.substring(2, 4));
         let day = parseInt(SSN.substring(4, 6));
-
-
 
         if (!(month >= 1 && month <= 12)){
             alert("Month out of range");
             return false;
         }
 
-        
-
-        if (month === 2){
-            if (!(day >= 1 && day <= 28)){
-                alert("Day out of range");
-                return false;
-            }
+        if (month === 2 && !(day >= 1 && day <= 28)){
+            alert("Day out of range");
+            return false;
         }
 
         let evenMonth = month % 2 === 0;
@@ -52,11 +40,9 @@ function validateSocialSecurityNumber(){
             }
         }
 
-        else{
-            if (!(day >= 1 && day <= 31)){
-                alert("Day out of range");
-                return false;
-            }
+        else if (!(day >= 1 && day <= 31)){
+            alert("Day out of range");
+            return false;
         }
     }
     return true;
@@ -76,9 +62,7 @@ function validatePassword(){
         return false;
     }
 
-
     let hasNumber = false;
-
 
     for (let char of password){
         if (!isNaN(parseInt(char))){
