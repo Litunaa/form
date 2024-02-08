@@ -95,7 +95,7 @@ body{
 }
 
 /* Styling for submit button */
-.register-container input[type="submit"]{
+.register-container input[type="submit"], .login-container input[type="submit"]{
     height: 40px;
 }
 
